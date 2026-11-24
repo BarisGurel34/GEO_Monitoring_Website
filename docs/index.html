@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A research showcase by Baris Gurel on how AI search describes local businesses and how to verify those claims.">
+<meta name="robots" content="noindex">
+<title>Evaluating AI Search Answers</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="wrap nav"><a class="brand" href="#top">GEO Monitoring</a><nav aria-label="Sections"><a href="#overview">Overview</a><a href="#method">Method</a><a href="#example">Demo</a><a href="#progress">Progress</a></nav></div></header>
+<main id="main">
+<section class="hero wrap" id="top">
+<h1>Evaluating <span>AI Search</span> Answers</h1>
+<p class="tagline">Which businesses appear in AI search answers, and what happens to the details people rely on?</p>
+<p class="credit">Baris Gurel</p>
+<div class="actions"><a class="pill primary" href="#example">Try the claim check</a><a class="pill" href="#progress">Follow the study</a></div>
+</section>
+<section id="overview" class="section prose">
+<h2>Overview</h2>
+<p>AI search tools often combine information from several pages into one answer. A detail may change in the process. For example, an answer might leave out the minimum order for free delivery.</p>
+<p>This study tracks how answers describe local businesses. It compares individual claims with website passages to identify which details are supported, which need more evidence, and what businesses could make clearer on their pages.</p>
+</section>
+<figure class="wrap workflow" aria-labelledby="workflow-heading">
+<h2 id="workflow-heading">From AI answers to website suggestions</h2>
+<ol role="list">
+<li><h3>Ask and repeat</h3><p>Run the same question in fresh sessions across AI search tools.</p></li>
+<li><h3>Record what appears</h3><p>Save the answers, their links, and any search traces the tools expose.</p></li>
+<li><h3>Check a claim</h3><p>Compare a detail in the answer with the relevant passage on the business’s website.</p></li>
+<li><h3>Suggest a change</h3><p>Use the comparison to identify what the page could make clearer.</p></li>
+</ol>
+</figure>
+<section class="band section" id="method"><div class="prose">
+<h2>Why repeat the same question?</h2>
+<p>Ask the same question in separate sessions to see which sources and claims recur. Save the answer and the links it displays so each observation can be checked later.</p>
+<p>When checking a claim, keep the surrounding context. A source may give a price or describe a service with a condition that changes its meaning.</p>
+</div></section>
+<section class="section wrap" id="example">
+<div class="prose centered"><h2>What does a claim check look like?</h2><p>A hypothetical example about a delivery policy.</p></div>
+<div class="example">
+<div class="example-sources">
+<article><h3>AI answer</h3><blockquote>“The shop offers <mark>free delivery</mark>.”</blockquote></article>
+<article><h3>Website evidence</h3><blockquote>“Free delivery on <mark>orders over $50</mark>.”</blockquote></article>
+</div>
+<div class="comparison">
+<div><h3>What the evidence supports</h3><p>The source supports free delivery for orders over $50. The answer leaves out the minimum order value.</p></div>
+<div><h3>Suggested clarification</h3><p>Place the minimum order value next to each mention of free delivery.</p></div>
+</div>
+<details class="sample"><summary>See how this check would be recorded</summary>
+<dl>
+<dt>Claim</dt><dd>The shop offers free delivery.</dd>
+<dt>Evidence</dt><dd>The website states that free delivery applies to orders over $50.</dd>
+<dt>Assessment</dt><dd>Supported with a condition. The answer omits the minimum order value.</dd>
+</dl>
+</details>
+</div>
+</section>
+<section class="section band" id="analysis"><div class="prose">
+<h2>What to record</h2>
+<ul class="reading">
+<li><strong>Visibility.</strong> Which businesses or sources appear across repeated answers?</li>
+<li><strong>Source links.</strong> Which pages are linked in the final answer? When search records are available, which other sources did the tool return?</li>
+<li><strong>Support for claims.</strong> Which details about services, fees, and locations can we check against the pages we inspect?</li>
+</ul>
+<p>A separate experiment would be needed to see whether a page edit changes citations or traffic.</p>
+</div></section>
+<section class="section prose" id="progress">
+<h2>Research progress</h2>
+<ol class="timeline" role="list">
+<li><time datetime="2026-11-23">23 November 2026</time><h3>Collection rehearsed</h3><p>Trial runs checked which answers, links and search records the tools expose. The offline pipeline was also tested with fictional responses.</p></li>
+<li><time datetime="2026-11-24">24 November 2026</time><h3>Study collection scheduled</h3><p>The collection schedule is set. The next step is to check that the first runs save the evidence needed for the claim audit.</p></li>
+</ol>
+<p>The <a href="https://github.com/BarisGurel34/GEO_Monitoring">offline pipeline</a> includes tests and a runnable sample that produces CSV and JSONL exports.</p>
+</section>
+</main>
+<footer><div class="wrap foot"><span>GEO research</span><a href="#top">Back to top</a></div></footer>
+</body>
+</html>
