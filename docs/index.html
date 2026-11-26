@@ -25,35 +25,37 @@
 <figure class="wrap workflow" aria-labelledby="workflow-heading">
 <h2 id="workflow-heading">From AI answers to website suggestions</h2>
 <ol role="list">
-<li><h3>Ask and repeat</h3><p>Run the same question in fresh sessions across AI search tools.</p></li>
-<li><h3>Record what appears</h3><p>Save the answers, their links, and any search traces the tools expose.</p></li>
+<li><h3>Ask and repeat</h3><p>Run the same four questions through three command-line tools in fresh sessions.</p></li>
+<li><h3>Record what appears</h3><p>Save the original answers, displayed links and available search records separately.</p></li>
 <li><h3>Check a claim</h3><p>Compare a detail in the answer with the relevant passage on the business’s website.</p></li>
 <li><h3>Suggest a change</h3><p>Use the comparison to identify what the page could make clearer.</p></li>
 </ol>
 </figure>
 <section class="band section" id="method"><div class="prose centered">
-<h2>Why repeat the same question?</h2>
-<p>Asking the same question on different days shows which sources and claims recur, and which depend on the run or the AI search setup.</p>
+<h2>How the study collects answers</h2>
+<p>After testing API access during setup, we moved study collection to subscription-based access through Codex CLI, Antigravity CLI and Claude Code. The collector opens a fresh session for each question and model configuration and records when the session actually ran.</p>
 </div>
 <figure class="wrap schedule" id="schedule">
 <div class="schedule-grid">
 <table>
-<caption>Questions rotate across days</caption>
-<thead><tr><th scope="col">Round</th><th scope="col">Question A</th><th scope="col">Question B</th><th scope="col">Question C</th></tr></thead>
+<caption>Collection schedule, 25–28 November 2026</caption>
+<thead><tr><th scope="col">Date</th><th scope="col">Morning</th><th scope="col">Evening</th></tr></thead>
 <tbody>
-<tr><th scope="row">First</th><td>Day 1</td><td>Day 2</td><td>Day 3</td></tr>
-<tr><th scope="row">Repeat</th><td>Day 4</td><td>Day 5</td><td>Day 6</td></tr>
+<tr><th scope="row">25 Nov</th><td>1 run</td><td>1 run</td></tr>
+<tr><th scope="row">26 Nov</th><td>1 run</td><td>1 run</td></tr>
+<tr><th scope="row">27 Nov</th><td>1 run</td><td>1 run</td></tr>
+<tr><th scope="row">28 Nov</th><td>1 run</td><td>None</td></tr>
 </tbody>
 </table>
 <div class="runs">
-<h3>Inside one day</h3>
+<h3>What each run covers</h3>
 <dl>
-<div><dt>First run</dt><dd>Several AI search setups receive the day’s question.</dd></div>
-<div><dt>Repeat run</dt><dd>Selected setups receive the same question in fresh sessions.</dd></div>
+<div><dt>Four fixed questions</dt><dd>Every run includes all four. Their order rotates by study day.</dd></div>
+<div><dt>12 medium-effort configurations</dt><dd>Each configuration answers every question, for 48 planned sessions per run and 336 in total.</dd></div>
 </dl>
 </div>
 </div>
-<figcaption>Illustrative schedule. Repeating Question A lets us compare answers across setups and days.</figcaption>
+<figcaption>Runs are started manually in morning and evening windows. Repeating each question and configuration across seven runs lets us compare answers over time.</figcaption>
 </figure>
 </section>
 <section class="section wrap" id="example">
@@ -78,7 +80,7 @@
 </section>
 <section class="section band" id="analysis"><div class="prose centered">
 <h2>What one session can reveal</h2>
-<p>A collection record keeps these three kinds of evidence separate.</p>
+<p>The collector saves the original answer and separates the links it displays from the sources returned by search. The available search records vary by tool. For Antigravity CLI, the collector recovers available search references from the saved session after each answer.</p>
 </div>
 <figure class="wrap evidence" aria-label="Three kinds of evidence saved from a search session">
 <div class="evidence-grid">
@@ -88,7 +90,7 @@
 </div>
 <figcaption>Fictional examples. The audit checks individual claims against the relevant passage on a business’s website.</figcaption>
 </figure>
-<div class="prose"><p>A separate experiment would be needed to see whether a page edit changes citations or traffic.</p></div>
+<div class="prose"><p>The planned audit samples completed morning answers by question and command-line tool. It checks claims about named businesses against dated website passages and marks support as unknown when the available evidence is insufficient.</p><p>A separate experiment would be needed to see whether a page edit changes citations or traffic.</p></div>
 </section>
 <section class="section prose" id="progress">
 <h2>Research progress</h2>
